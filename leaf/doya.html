@@ -391,6 +391,27 @@
         <p class="text" style="color: gold; font-weight: bold; margin: 0;">السلام عليكم ورحمة الله وبركاته</p>
     </footer>
 
+
+    <script>
+function toggleMobileMenu() {
+    var menu = document.getElementById('mobile-menu-list');
+    menu.classList.toggle('show');
+}
+function toggleMobileSub(e) {
+    e.preventDefault();
+    var sub = document.getElementById('mobile-sub');
+    sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+}
+window.onclick = function(event) {
+    if (!event.target.matches('.hamburger') && !event.target.closest('#mobile-menu-list')) {
+        var menu = document.getElementById('mobile-menu-list');
+        if (menu.classList.contains('show')) {
+            menu.classList.remove('show');
+        }
+    }
+}
+</script>
+
 </body>
 
 </html>
