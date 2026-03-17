@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/i/logo.svg" type="image/svg+xml">
     <title>দোয়া - মিসবাহ</title>
     <style>
         body {
@@ -243,8 +244,8 @@
             border: 2px solid #d4af37;
 
             /* Background and Shape */
-            /* background-color: #147a3e; */
-            background: url('hm.png') center/cover;
+            background-color: #147a3e;
+            /* background: url('hm.png') center/cover; */
             border-radius: 20px;
             /* Slightly more rounded for the larger size */
 
@@ -370,29 +371,31 @@
     </nav>
 
     <nav class="mobile-nav">
-    <div class="mobile-top-bar">
-        <div class="m-left"><a href="/i/index.html" class="logo">মিসবাহ</a></div>
-        <div class="m-center"><p class="mobile-bismillah">بسم الله</p></div>
-        <div class="m-right"><button class="hamburger" onclick="toggleMobileMenu()">☰</button></div>
-    </div>
-    <ul id="mobile-menu-list">
-        <li><a href="/i/index.html">প্রচ্ছদ</a></li>
-        <li>
-            <a href="#" onclick="toggleMobileSub(event)">আলোচ্য ▾</a>
-            <ul class="mobile-sub-menu" id="mobile-sub">
-               <li><a href="/i/sub/db.html">দোয়া ও বিধান</a></li>
-                <li><a href="/i/sub/truth.html">চরম সত্য</a></li>
-            </ul>
-        </li>
-        <li><a href="/i/about.html">উদ্দেশ্য</a></li>
-    </ul>
-</nav>
+        <div class="mobile-top-bar">
+            <div class="m-left"><a href="/i/index.html" class="logo">মিসবাহ</a></div>
+            <div class="m-center">
+                <p class="mobile-bismillah">بسم الله</p>
+            </div>
+            <div class="m-right"><button class="hamburger" onclick="toggleMobileMenu()">☰</button></div>
+        </div>
+        <ul id="mobile-menu-list">
+            <li><a href="/i/index.html">প্রচ্ছদ</a></li>
+            <li>
+                <a href="#" onclick="toggleMobileSub(event)">আলোচ্য ▾</a>
+                <ul class="mobile-sub-menu" id="mobile-sub">
+                    <li><a href="/i/sub/db.html">দোয়া ও বিধান</a></li>
+                    <li><a href="/i/sub/truth.html">চরম সত্য</a></li>
+                </ul>
+            </li>
+            <li><a href="/i/about.html">উদ্দেশ্য</a></li>
+        </ul>
+    </nav>
 
     <div class="header">
         দোয়া
     </div>
     <div class="master-container">
-         <div class="section-title">দোয়া সমূহ:</div>
+        <div class="section-title">দোয়া সমূহ:</div>
 
         <div class="dua-card">
             <div class="section arabic-verse"> رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ
@@ -454,24 +457,24 @@
 
 
     <script>
-function toggleMobileMenu() {
-    var menu = document.getElementById('mobile-menu-list');
-    menu.classList.toggle('show');
-}
-function toggleMobileSub(e) {
-    e.preventDefault();
-    var sub = document.getElementById('mobile-sub');
-    sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
-}
-window.onclick = function(event) {
-    if (!event.target.matches('.hamburger') && !event.target.closest('#mobile-menu-list')) {
-        var menu = document.getElementById('mobile-menu-list');
-        if (menu.classList.contains('show')) {
-            menu.classList.remove('show');
+        function toggleMobileMenu() {
+            var menu = document.getElementById('mobile-menu-list');
+            menu.classList.toggle('show');
         }
-    }
-}
-</script>
+        function toggleMobileSub(e) {
+            e.preventDefault();
+            var sub = document.getElementById('mobile-sub');
+            sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.hamburger') && !event.target.closest('#mobile-menu-list')) {
+                var menu = document.getElementById('mobile-menu-list');
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                }
+            }
+        }
+    </script>
 
 </body>
 
