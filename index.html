@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/i/logo.svg" type="image/svg+xml">
     <title>মিসবাহ</title>
     <style>
         /* General Styles */
@@ -349,26 +350,28 @@
     </nav>
 
     <nav class="mobile-nav">
-    <div class="mobile-top-bar">
-        <div class="m-left"><a href="#" class="logo">মিসবাহ</a></div>
-        <div class="m-center"><p class="mobile-bismillah">بسم الله</p></div>
-        <div class="m-right"><button class="hamburger" onclick="toggleMobileMenu()">☰</button></div>
-    </div>
-    <ul id="mobile-menu-list">
-        <li><a href="/i/index.html">প্রচ্ছদ</a></li>
-        <li>
-            <a href="#" onclick="toggleMobileSub(event)">আলোচ্য ▾</a>
-            <ul class="mobile-sub-menu" id="mobile-sub">
-               <li><a href="/i/sub/db.html">দোয়া ও বিধান</a></li>
-                <li><a href="/i/sub/truth.html">চরম সত্য</a></li>
-            </ul>
-        </li>
-        <li><a href="/i/about.html">উদ্দেশ্য</a></li>
-    </ul>
-</nav>
+        <div class="mobile-top-bar">
+            <div class="m-left"><a href="#" class="logo">মিসবাহ</a></div>
+            <div class="m-center">
+                <p class="mobile-bismillah">بسم الله</p>
+            </div>
+            <div class="m-right"><button class="hamburger" onclick="toggleMobileMenu()">☰</button></div>
+        </div>
+        <ul id="mobile-menu-list">
+            <li><a href="/i/index.html">প্রচ্ছদ</a></li>
+            <li>
+                <a href="#" onclick="toggleMobileSub(event)">আলোচ্য ▾</a>
+                <ul class="mobile-sub-menu" id="mobile-sub">
+                    <li><a href="/i/sub/db.html">দোয়া ও বিধান</a></li>
+                    <li><a href="/i/sub/truth.html">চরম সত্য</a></li>
+                </ul>
+            </li>
+            <li><a href="/i/about.html">উদ্দেশ্য</a></li>
+        </ul>
+    </nav>
 
     <header>
-        <h1>الفرقان</h1>
+        <h1>مِصْبَاح</h1>
         <p>" তবে কি তোমরা গ্রন্থের কিয়দংশ বিশ্বাস কর এবং কিয়দংশ অবিশ্বাস কর? "</p>
     </header>
 
@@ -381,7 +384,7 @@
                 <p>নিশ্চয়ই আমি তোমার খুব কাছেই আছি</p>
             </a>
 
-            <a href="/i/sub/truth.html" class="subject-card">
+            <a href="#" class="subject-card">
                 <h3>চরম সত্য</h3>
                 <p>আল্লাহর ফয়সালাই শেষ কথা এবং এটাই চরম সত্য</p>
             </a>
@@ -397,24 +400,24 @@
 
 
     <script>
-function toggleMobileMenu() {
-    var menu = document.getElementById('mobile-menu-list');
-    menu.classList.toggle('show');
-}
-function toggleMobileSub(e) {
-    e.preventDefault();
-    var sub = document.getElementById('mobile-sub');
-    sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
-}
-window.onclick = function(event) {
-    if (!event.target.matches('.hamburger') && !event.target.closest('#mobile-menu-list')) {
-        var menu = document.getElementById('mobile-menu-list');
-        if (menu.classList.contains('show')) {
-            menu.classList.remove('show');
+        function toggleMobileMenu() {
+            var menu = document.getElementById('mobile-menu-list');
+            menu.classList.toggle('show');
         }
-    }
-}
-</script>
+        function toggleMobileSub(e) {
+            e.preventDefault();
+            var sub = document.getElementById('mobile-sub');
+            sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.hamburger') && !event.target.closest('#mobile-menu-list')) {
+                var menu = document.getElementById('mobile-menu-list');
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                }
+            }
+        }
+    </script>
 
 </body>
 
